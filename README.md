@@ -34,6 +34,6 @@ an instance of a Person object as the argument to the method.
 This method returns a list of people that match the given keyword with both the names. 
 We make another field named full_name by concatenating both first_name and last_name. We match the full name of the people in our address book.
 
-### AddressBook.find_all_person_by_name
+### AddressBook.find_all_person_by_email
 This method returns a list of people whose emails match the given keyword.
 A keyword can be the whole email or just a prefix and we'll still match it.
