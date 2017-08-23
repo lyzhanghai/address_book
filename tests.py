@@ -55,6 +55,7 @@ class TestAddressBook(unittest.TestCase):
         people = AddressBook.find_all_person_by_name(lname)
         try:
             p = Person.get(Person.last_name == lname)
+            print(p.first_name)
             self.assertIn(p, people)
         except Person.DoesNotExist:
             pass

@@ -2,9 +2,11 @@ from peewee import *
 
 db = SqliteDatabase('db/address_book.db')
 
+
 class BaseModel(Model):
     class Meta:
         database = db
+
 
 class Group(BaseModel):
     """
@@ -119,10 +121,10 @@ class AddressBook(BaseModel):
             groups.append(g.group)
         return groups
 
+
 def create_tables():
     db.connect()
     try:
         db.create_tables([Group, Person, Street, Phone, Email, AddressBook])
     except Exception as e:
         pass
-
