@@ -4,7 +4,7 @@ from datetime import datetime
 
 from my_exception import MyException
 
-db = MySQLDatabase(host='', user='root', passwd='',
+db = MySQLDatabase(host='114.215.71.74', user='root', passwd='mysql',
                    database='system_manager_ssh_0818', port=3306)
 
 
