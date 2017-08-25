@@ -3,6 +3,9 @@ from votemodel import *
 
 from my_exception import MyException
 
+from log.log import logger;
+
+
 class TestVote(unittest.TestCase):
     def test_add_vote_log(self):
         vote_log = {
@@ -56,13 +59,13 @@ class TestVote(unittest.TestCase):
             result = VoteLog.get_vote_log_list(a_id, p_id, open_id)
         except MyException as e:
             print(e.value)
-        # for item in result:
-        #     print(item.nick_name)
+            # for item in result:
+            #     print(item.nick_name)
 
     def test_get_vote_log_list_sql(self):
         a_id = 1
         p_id = 1
         open_id = 1
-        result = VoteLog.get_vote_log_list_sql(a_id,p_id,open_id)
+        result = VoteLog.get_vote_log_list_sql(a_id, p_id, open_id)
         for item in result:
-            print(item.nick_name)
+            logger.info(item.nick_name)

@@ -130,5 +130,5 @@ class VoteLog(BaseModel):
     @classmethod
     def get_vote_log_list_sql(cls, a_id, p_id, open_id):
         query = cls.raw("select * from tb_vote_log where p_id=%s", p_id)
-        print(query.sql())
+        # print(query.sql())
         return query
